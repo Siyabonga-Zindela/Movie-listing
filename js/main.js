@@ -10,13 +10,18 @@ const options = {
 
 function fetchMovieData(){
 	let eachMovieHTML= "";
+	let moviesArray = [];
+
 	fetch("https://imdb236.p.rapidapi.com/api/imdb/cast/nm0000190/titles",options)
-		.then((response => response.json()))
+		.then((response => {
+			console.log(response.json());
+		}))
 		.then((data => {
-		const movieData = data;
+		moviesArray = data;
 		
-		if(movieData){
-			movieData.forEach(movie => {
+		if(moviesArray){
+			
+			moviesArray.forEach(movie => {
 				if(movie.primaryImage || movie.description){
 					eachMovieHTML += `
 				 <div class="movie-card">
@@ -52,5 +57,4 @@ function fetchMovieData(){
 }
 fetchMovieData();
 
-	
 	
