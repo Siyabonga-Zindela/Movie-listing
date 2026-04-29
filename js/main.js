@@ -45,9 +45,6 @@ function fetchMovieData(){
 			});
 			
 		}
-		else{
-			alert("Unable to fetch movie data.");
-		}
 		
 		let moviesWrapper = document.querySelector(".movies-wrapper");
 
