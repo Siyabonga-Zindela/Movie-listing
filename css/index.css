@@ -97,7 +97,7 @@ input{
 .orange-text{
     color: rgb(255, 153, 0);
 }
-/*
+/* 
 .movies-wrapper{
     display: grid;
     grid-template-columns: repeat(autofit,minmax(300px,1fr));
@@ -106,8 +106,8 @@ input{
     justify-content: center;
     align-items: center;
     height: 90vh;
-}
-*/
+} */
+
 h3{
     color: rgb(255, 255, 255);
     font-size: 2rem;
@@ -119,7 +119,7 @@ h3{
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
-    
+    margin-top: 5%;
 }
 
 .right-header{
@@ -131,32 +131,41 @@ h3{
     width: 40px;
 }
 .movies-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,290px));
-    grid-template-rows: auto;
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    gap: 1rem;
     width: 100%;
     background: #000000;
     height: auto;
     gap: 0.5rem;
+   
 }
 
 .movie-card{
     background-color: #01000e;
     height: auto;
-    min-width: 280px;
     padding: 15px;
     border-radius: 5px;
+    
 }
 .movie-card:hover{
-
+    transform: translateY(-4px);
+  background: #01000e;
+  color: #000;
+  box-shadow: 
+      0 0 10px #00e5ff,
+      0 0 20px #00e5ff,
+      0 0 40px rgba(0,229,255,0.6);
 }
 .movie-card p{
     color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 .image-container img{
-    height: auto;
+    height: 400px;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 5px;
 }
 .image-container{
