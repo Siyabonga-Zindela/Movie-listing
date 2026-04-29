@@ -14,7 +14,11 @@ function fetchMovieData(){
 
 	fetch("https://imdb236.p.rapidapi.com/api/imdb/cast/nm0000190/titles",options)
 		.then((response => {
-			console.log(response.json());
+			response.json();
+			if(!response.ok){
+				alert("Service is currently not available.");
+				return;
+			}
 		}))
 		.then((data => {
 		moviesArray = data;
